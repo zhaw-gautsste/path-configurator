@@ -1,0 +1,78 @@
+{
+  "name": "path-configurator",
+  "version": "0.1.5",
+  "description": "Path Application Framework Configurator",
+  "keywords": [
+    "GUI",
+    "JSON",
+    "REST",
+    "RAD",
+    "Low Code Framework",
+    "Path Configurator",
+    "Rapid Application Development",
+    "Rapid Application Manufacturing"
+  ],
+  "homepage": "https://github.com/zhaw-gautsste/path-configurator/",
+  "bugs": {
+    "url": "https://github.com/zhaw-gautsste/path-configurator/issues"
+  },
+  "license": "LGPL-3.0",
+  "author": {
+    "name": "Stefan Gautschi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaw-gautsste/path-configurator.git"
+  },
+  "engines": {
+    "node": "10.14.0",
+    "npm": "6.8.0"
+  },
+  "scripts": {
+    "start": "tsc --project server/tsconfig.json && concurrently \"ng serve\" \"nodemon dist/server/app.js\"",
+    "build": "npm run lint && ng build",
+    "test": "ng test",
+    "dev": "concurrently \"mongod\" \"ng serve --proxy-config proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
+    "lint": "tslint --project .",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "tsc --project server/tsconfig.json && ng build"
+  },
+  "dependencies": {
+    "@angular/cli": "7.2.4",
+    "@angular/compiler-cli": "^7.2.11",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "^6.0.60",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "core-js": "^2.5.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "file-saver": "^2.0.1",
+    "mongoose": "^5.5.10",
+    "morgan": "^1.9.1",
+    "multer": "1.4.1",
+    "path-framework": "^0.5.6",
+    "pouchdb-adapter-memory": "6.3.4",
+    "pouchdb-core": "^7.0.0",
+    "ts-node": "2.0.0",
+    "typescript": "3.2.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.13.9",
+    "bootstrap": "^3.4.1",
+    "codelyzer": "4.5.0",
+    "concurrently": "^2.2.0",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "3.2.0",
+    "karma": "^4.0.1",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-coverage-istanbul-reporter": "0.2.0",
+    "karma-jasmine": "1.1.0",
+    "karma-jasmine-html-reporter": "0.2.2",
+    "nodemon": "^1.18.10",
+    "protractor": "^5.4.2",
+    "tslint": "5.11.0",
+    "tslint-angular": "1.1.2",
+    "turbocommons-ts": "^1.1.0"
+  }
+}
