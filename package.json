@@ -46,7 +46,7 @@
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "file-saver": "^2.0.1",
     "mongoose": "^5.5.10",
     "morgan": "^1.9.1",
