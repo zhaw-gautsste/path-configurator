@@ -58,7 +58,7 @@
     "typescript": "3.2.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.13.9",
+    "@angular-devkit/build-angular": "^15.0.4",
     "bootstrap": "^3.4.1",
     "codelyzer": "4.5.0",
     "concurrently": "^2.2.0",
